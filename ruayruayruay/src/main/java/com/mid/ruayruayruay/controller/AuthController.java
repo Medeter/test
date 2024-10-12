@@ -14,6 +14,12 @@ public class AuthController {
     @Autowired
     private UserService userService;
 
+
+    @GetMapping("/")
+    public String home() {
+        return "Hello"; // ไปยังหน้า login หากเข้ามาที่หน้าหลัก
+    }
+
     @GetMapping("/login")
     public String loginPage() {
         return "login"; // แสดงผลหน้า login.html
